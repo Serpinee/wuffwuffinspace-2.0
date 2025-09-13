@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Shooter - Ragnars Weltraum-Abenteuer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/7.2.4/pixi.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-area">
+            <div class="canvas-container" id="game-canvas-container">
+                <!-- Hier wird der Canvas eingefügt -->
+            </div>
+            
+
+            <!-- Willkommen Text -->
+            <div class="welcome-text">
+                <h1>🚀 RAGNARS WELTRAUM-MISSION 🛸</h1>
+                <p>
+                    Willkommen, flauschiger Pilot! Das Universum ist in Gefahr und nur du kannst es retten. 
+                    Feindliche UFOs haben unsere Galaxie infiltriert und bedrohen dein Futternapf.
+                </p>
+        
+               
+            </div>
+        </div>
+
+        <!-- Steuerung -->
+
+        <div class="controls-panel">
+            <h2>🎮 STEUERUNG</h2>
+            
+            <div class="control-section">
+                <h3>Bewegung</h3>
+                <div class="control-item">
+                    <span class="key">↑</span>
+                    <span class="action">Nach oben</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">↓</span>
+                    <span class="action">Nach unten</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">←</span>
+                    <span class="action">Nach links</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">→</span>
+                    <span class="action">Nach rechts</span>
+                </div>
+            </div>
+
+            <div class="control-section">
+                <h3>Kampf</h3>
+                <div class="control-item">
+                    <span class="key">SPACE</span>
+                    <span class="action">Laser abfeuern</span>
+                </div>
+            </div>
+
+            <div class="game-info">
+                <h3>💰 PUNKTESYSTEM</h3>
+                <div class="info-item">
+                    <span class="enemy-type">Normales UFO:</span>
+                    <span class="points">10 Punkte</span>
+                </div>
+                <div class="info-item">
+                    <span class="enemy-type">Boss UFO:</span>
+                    <span class="points">50 Punkte</span>
+                </div>
+            </div>
+
+            <!-- WARNUNG ! -->
+
+            <p style="color: #ff6b6b; font-weight: bold;">
+            Eine Kollision mit einem UFO bedeutet GAME OVER ⚠️
+            </p>
+
+            
+        </div>
+    </div>
+
+    <!-- Zuerst wird gameloop.js und dann app.js geladen -->
+    <script src="gameloop.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

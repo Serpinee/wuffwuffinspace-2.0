@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.canvas-container {
+    border: 3px solid #00ff88;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(8, 22, 211, 0.3);
+    overflow: hidden;
+    background: #000;
+}
+
+.welcome-text {
+    margin-top: 20px;
+    text-align: center;
+    max-width: 600px;
+}
+
+.welcome-text h1 {
+    color: #00ff88;
+    font-size: 1.6em;
+    margin-bottom: 8px;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    letter-spacing: 1px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(0, 255, 136, 0.8), 0 0 25px rgba(0, 255, 136, 0.5);
+    }
+}
+
+.welcome-text p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    color: #cccccc;
+}
+
+.controls-panel {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #00ff88;
+    border-radius: 10px;
+    padding: 15px;
+    min-width: 250px;
+    max-width: 280px;
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.controls-panel h2 {
+    color: #00ff88;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 255, 136, 0.5);
+}
+
+.control-section {
+    margin-bottom: 15px;
+}
+
+.control-section h3 {
+    color: #ff6b6b;
+    font-size: 1.0em;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 3px;
+}
+
+.control-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 3px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.key {
+    background: #333;
+    color: #00ff88;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: bold;
+    border: 1px solid #555;
+    min-width: 50px;
+    text-align: center;
+    transition: all 0.2s ease;
+    font-size: 0.8em;
+}
+
+.key:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+
+.action {
+    color: #ffffff;
+    font-size: 0.8em;
+}
+
+.game-info {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.game-info h3 {
+    color: #ffd700;
+    font-size: 1.0em;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+    font-size: 0.8em;
+}
+
+.enemy-type {
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.points {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+.canvas-container:hover {
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+
+@media (max-width: 1000px) {
+    .game-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .controls-panel {
+        max-width: 600px;
+        width: 100%;
+        margin-top: 20px;
+    }
+}
